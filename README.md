@@ -28,3 +28,32 @@
 - **Streamlit** – live monitoring dashboard
 
 ## 📐 Architecture (High‑Level)
+Source Docs → Ingest → Parse → Adaptive Chunking + Embeddings →
+Vector Index (Azure AI Search) → RAG API (GPT‑4o) → Answer
+
+## 💡 Use‑Cases
+- **Legal**: contract Q&A without reading 200 pages.  
+- **Healthcare**: patient‑centric info retrieval across PDFs & scans.  
+- **Customer Support**: instant answers from KB articles & manuals.  
+- **Research**: query scientific papers with full citation trace.
+
+## 🚴‍♂️ Quick Start
+1. **Clone** the repo.  
+2. `pip install -r requirements.txt`  
+3. Set Azure/OpenAI keys in `.env`.  
+4. `python cli.py ingest ./docs`  
+5. `python cli.py serve` → ask questions at `localhost:8000/ask?query=`
+
+## 🛣 Roadmap
+- Multimodal chunking (text + tables + images)  
+- Multilingual support  
+- SharePoint & Confluence connectors  
+- RLHF fine‑tuning loop
+
+## 👥 Team
+- Arthur Duarte  
+- Izabelly Armeris
+
+---
+
+> “From unstructured chaos to structured insight—at the speed of DataSage.”
